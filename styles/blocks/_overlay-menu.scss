@@ -1,0 +1,84 @@
+@use '../helpers' as *;
+
+.overlay-menu {
+  position: relative;
+  padding: 0;
+  width: 993px;
+  height: 471px;
+  border: none;
+  border-radius: var(--border-radius-default);
+
+  @include tablet {
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 47px;
+    margin-inline: 15px;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.56);
+  }
+
+  &__description {
+    font-family: var(--font-family-secondary);
+    font-size: 20px;
+    text-align: center;
+    margin: 96px 61px 95px;
+    line-height: 140%;
+    display: -webkit-box;
+    -webkit-line-clamp: 24;
+    -webkit-box-orient: vertical;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    @include tablet {
+      padding-inline: 7px;
+      margin-inline: 9px;
+      margin-top: 58px;
+      margin-bottom: 41px;
+    }
+  }
+
+  &__button-close {
+    @include flex-center;
+
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    width: 41px;
+    height: 41px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.overlay-menu__description::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+}
+
+.overlay-menu__description::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overlay-menu__description::-webkit-scrollbar-thumb {
+  width: 4px;
+  background: #606060;
+  border-radius: 4px;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  background-clip: content-box;
+}
+
+.overlay-menu__description::-webkit-scrollbar-track-piece:end {
+    background: #C8C8C8;
+    border-radius: 4px;
+}
+
+.overlay-menu__description::-webkit-scrollbar-track-piece:start {
+    background: #C8C8C8;
+    border-radius: 4px;
+}

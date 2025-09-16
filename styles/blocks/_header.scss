@@ -1,0 +1,73 @@
+@use '../helpers' as *;
+
+.header {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 52px;
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 40px;
+    color: var(--color-white);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__logo {
+    font-family: var(--font-family-accent);
+    font-size: 32px;
+    line-height: 1.046;
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    
+    @include hover {
+      text-decoration: underline;
+    }
+
+    &--arrow {
+      display: flex;
+      column-gap: 20px;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: var(--color-white);
+      border-bottom: 1px solid var(--color-white);
+
+      @include tablet {
+        display: none;
+      }
+
+      @include hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__mobile-menu {
+    margin: 0;
+    position: fixed;
+    width: 100vw;
+    height: 35vh;
+    border: none;
+    transition-duration: var(--transition-duration);
+
+    @include tablet-above {
+      display: contents;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use './fonts';
+@use './globals';
+@use './normalize';
+@use './utils';
+@use './variables';
+
+@use './blocks/header';
+@use './blocks/hero';
+@use './blocks/burger-button';
+@use './blocks/overlay-menu';
+@use './blocks/swiper';

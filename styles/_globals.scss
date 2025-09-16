@@ -1,0 +1,22 @@
+@use 'helpers' as *;
+
+body {
+  font-size: 14px;
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  color: var(--color-white);
+  background: url(../images/bg.jpg) center center/cover no-repeat;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

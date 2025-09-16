@@ -1,0 +1,27 @@
+@use 'helpers' as *;
+
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-green: #5E7600;
+  --color-green-alt: #F6FFD2;
+
+  --border: 3px solid var(--color-white);
+  --border-radius-default: 35px;
+  --border-radius-mixed: 35px 0 35px 0;
+  --border-radius-button: 166.9px;
+  --border-radius-button-mobile: 140.51px;
+
+  --shadow: 0 0 10px var(--color-white);
+
+  --font-family-primary: 'Actay', sans-serif;
+  --font-family-secondary: 'Inter', sans-serif;
+  --font-family-accent: 'Actay Wide', sans-serif;
+
+  --container-width: 1140px;
+  --container-padding-x: 15px;
+
+  --button-height: 50.29px;
+
+  --transition-duration: 0.2s;
+}

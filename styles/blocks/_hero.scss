@@ -1,0 +1,139 @@
+@use '../helpers' as *;
+
+.hero {
+  padding-block: 40px 63.36px;
+
+  @include tablet {
+    padding-inline: 0;
+  }
+
+  &__title {
+    font-size: 90px;
+    text-align: center;
+
+    @include tablet {
+      font-size: 35px;
+    }
+  }
+
+  &__list {
+    position: relative;
+    color: var(--color-green-alt);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__item {
+    width: 286px;
+    background-color: rgba($color: #FFFFFF, $alpha: 0.3);
+    border: var(--border);
+    border-radius: var(--border-radius-mixed);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 5px var(--color-white);
+
+    &-mobile {
+      min-width: 96.5vw;
+      background-color: rgba($color: #FFFFFF, $alpha: 0.3);
+      border: var(--border);
+      border-radius: var(--border-radius-mixed);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 5px var(--color-white);
+    }
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-count {
+      width: 51px;
+      height: 51px;
+    }
+
+    &-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 10px;
+      padding-block: 14px;
+    }
+
+    &-description {
+      width: 195px;
+    }
+
+    &-triangle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      translate: 66% -45%;
+    }
+
+    &:first-child {
+      position: absolute;
+      top: 58px;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      top: 304px;
+      left: 77px;
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      top: 401px;
+      left: 427px;
+    }
+
+    &:nth-child(4) {
+      position: absolute;
+      top: 171px;
+      left: 355px;
+    }
+
+    &:nth-child(5) {
+      position: absolute;
+      top: 99px;
+      right: 0;
+    }
+
+    &:last-child {
+      position: absolute;
+      top: 255px;
+      left: 700px;
+    }
+  }
+  
+  &__line {
+    margin-top: 40px;
+    margin-left: 20px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: block;
+    font-family: var(--font-family-secondary);
+    font-size: 24.45px;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius-button);
+    height: var(--button-height);
+    width: 215px;
+    margin-inline: auto;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @include tablet {
+      border-radius: var(--border-radius-button-mobile);
+      margin-top: 61.98px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+
+.burger-button {
+  @include flex-center;
+
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+
+  span {
+    height: 2px;
+    width: 25px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    transition-duration: var(--transition-duration);
+  }
+
+  @include tablet-above {
+    display: none;
+  }
+}

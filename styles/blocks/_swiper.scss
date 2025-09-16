@@ -1,0 +1,70 @@
+@use '../helpers' as *;
+
+.swiper {
+  display: none !important;
+
+  @include tablet {
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 30px;
+
+    &-slide {
+      position: relative;
+      padding-inline: 15px;
+      padding-top: 20px;
+
+      &__wrapper {
+        padding: 44px 18px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: var(--border);
+        border-radius: var(--border-radius-mixed);
+        box-shadow: var(--shadow);
+      }
+
+      &__image {
+        width: 74px;
+        height: 73px;
+        margin-inline: auto;
+        margin-bottom: 22px;
+      }
+
+      &__description {
+        color: var(--color-green-alt);
+        width: 254px;
+        margin-inline: auto;
+      }
+
+      &::before {
+        content: url('../../icons/triangle-mobile.svg');
+        position: absolute;
+        top: 0;
+        right: 0;
+        translate: 0 -5%;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      margin-inline: 15px;
+    }
+
+    &__button-prev,
+    &__button-next {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      color: var(--color-green-alt);
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+
+.swiper-slide-active {
+  margin: 0 !important;
+}
