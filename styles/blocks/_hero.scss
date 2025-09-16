@@ -9,6 +9,7 @@
 
   &__title {
     font-size: 90px;
+    font-family: var(--font-family-accent);
     text-align: center;
 
     @include tablet {

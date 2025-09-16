@@ -9,46 +9,42 @@
 </head>
 <body>
   <header class="header container">
+    <input class="header__checkbox" type="checkbox" id="burger-toggle">
     <div class="header__logo">Epc<br>Hunters</div>
-    <dialog
-      class="header__mobile-menu"
-      id="mobileMenu"
+    <label
+      class="header__burger"
+      for="burger-toggle"
     >
-      <div class="header__wrapper">
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="/" class="header__link">Loren Ipsum</a>
-            </li>
-            <li class="header__item">
-              <a href="/" class="header__link">Loren Ipsum</a>
-            </li>
-            <li class="header__item">
-              <a href="/" class="header__link">Loren Ipsum</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <a href="/" class="header__link--arrow">
-        Loren ipsum
-        <img
-          src="/icons/arrow-top-right.svg"
-          alt=""
-          class="header__arrow"
-          loading="lazy"
-        >
-      </a>
-    </dialog>
-    <button
-      class="header__burger-button burger-button"
-      type="button"
-      onclick="mobileMenu.showModal()"
-      data-js-overlay-burger-button
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <span class="header__burger-text">Loren ipsum</span>
+      <span class="header__burger-middle-line"></span>
+    </label>
+    <ul class="header__list">
+      <li class="header__item">
+        <a href="/" class="header__link">Loren Ipsum</a>
+      </li>
+      <li class="header__item">
+        <a href="/" class="header__link">Loren Ipsum</a>
+      </li>
+      <li class="header__item">
+        <a href="/" class="header__link">Loren Ipsum</a>
+      </li>
+      <li class="header__item--arrow">
+        <a href="/" class="header__link--arrow">
+          Loren ipsum
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__arrow"
+          >
+            <path d="M7.9912 2H14V8.0088H13.2489V3.28509L2.52812 14L2 13.4719L12.7149 2.7511H7.9912V2Z" fill="white"/>
+          </svg>
+
+        </a>
+      </li>
+    </ul>
   </header>
   <main class="hero container">
     <h1 class="hero__title">Loren Ipsum</h1>
